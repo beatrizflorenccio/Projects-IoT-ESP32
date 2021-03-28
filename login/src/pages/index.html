@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ota</title>
+</head>
+<style>
+    body{
+        background:#121214;
+        font-family:sans-serif;
+        font-size:14px;
+        color:#e2e1e6;
+        margin: 0px;
+        padding: 0px;
+    }
+
+    form{
+        background:#201f24;
+        max-width:420px;
+        height: 400px;
+        padding:60px;
+        border-radius:5px;
+        
+        align-self: center;
+        justify-self: center;
+        
+    }
+
+    #file-input, input{
+        width:330px;
+        height:50px;
+        border-radius:5px;
+        margin:10px 10px;
+        font-size:16px;
+        padding: 10px;
+    }
+
+    input{
+        background:#121214;
+        border:0;
+        
+        color: white;
+        
+    }
+
+    
+
+    #file-input{
+        padding:0;
+        border:1px solid #ddd;
+        line-height:44px;
+        text-align:left;
+        display:block;
+        cursor:pointer;
+    }
+
+    .btn{
+        background:#00bccaa4;
+        color:#e2e1e6;
+        cursor:pointer;
+        width: 350px;
+        font-weight: bold;
+        
+    }
+
+    #bar,#prgbar{
+        background-color:#e2e1e6;
+        border-radius:10px;
+    }
+
+    #bar{
+        background-color:#3498db;
+        width:0%;
+        height:10px;
+    }
+
+    
+
+    .container {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center
+    }
+
+        
+    .column {
+        float: left;
+        width: 50%;
+        padding: 10px;
+        align-items: center;
+        height:auto;
+    }
+
+
+    
+</style>
+
+<body>
+    <div class="container">
+        <div class="column">
+            <h1>EM100</h1>
+        </div>
+        <div class="column">
+            <form name="loginForm">
+                <input type="text" name="userid" placeholder="Username">
+                <input type="password" name=pwd placeholder=Senha type=Password>
+                <input type=submit onclick=check(this.form) class=btn value="ENTRAR">
+            </form>
+        </div>
+    </div>
+    
+    <script>
+        function check(form) {
+            if(form.userid.value=="EMBEDDO" && form.pwd.value=="embeddo2020") {
+                window.open('/serverIndex')
+            }
+            else {
+                alert('Error Password or Username')
+            }
+        }
+    </script>
+</body>
+</html>
